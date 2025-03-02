@@ -35,7 +35,7 @@
 		<span class="author-block">
 		  <a href="https://gmberton.github.io/">Gabriele Berton</a><sup>1</sup>,</span>
 		<span class="author-block">
-		  <a href="https://ares.jsc.nasa.gov/people/bios/alex-h-stoken/">Alex
+		  <a href="https://alexstoken.github.io/">Alex
 		    Stoken</a><sup>2</sup>,</span>
 		<span class="author-block">
 		  <a href="https://www.carlomasone.com/">Carlo Masone</a><sup>1</sup>
@@ -71,7 +71,7 @@
                     <a href="https://3341e98c1979ac2831.gradio.live/"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="fab fa-github"></i>
+                        <i class="fas fa-map-marked-alt"></i>
                       </span>
                       <span>Demo</span>
                     </a>
@@ -80,12 +80,26 @@
                     <a view="https://drive.google.com/file/d/1Z-rqX1T0E352FVbBuvBcQGOFZ0RNmOLw/view"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="fab fa-github"></i>
+                        <i class="fas fa-play-circle"></i>
                       </span>
                       <span>Demo Video</span>
                     </a>
                   </span>
                 </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TL;DR</h2>
+        <div class="content has-text-justified">
+          We present <b>AstroLoc</b>, an accurate, robust localization model for space-based imagery of Earth. Trained jointly on astronaut photos from the International Space Station and images from Earth observing satellites, <b>AstroLoc</b> localizes via image retrieval over a database of satellite imagery. AstroLoc sets a <b>new SOTA</b> on existing space-based localization tasks like astronaut photography localization and Lost in Space orbit determination.
+          Check out our <a href="https://3341e98c1979ac2831.gradio.live/">demo</a> to see it in action!
         </div>
       </div>
     </div>
@@ -136,6 +150,8 @@
         <div class="column is-full-width">
           <div class="content">
             <h2 class="title is-3" style="text-align: center;">Training Pipeline</h2>
+            AstroLoc is the first APL model to be trained <em>on astronaut photos themselves</em>. After converting 300k weakly labeled astronaut photos into a fully labeled training set, we pair astronaut photos with corresponding satellite images and train using a contrastive loss. At the same time, we jointly train on batches of clustered satellite images (following the method in EarthLoc), to ensure our model has a complete view of Earth's landforms.
+            <p></p>
             <img src="./static/images/architecture.jpg" />
           </div>
         </div>
@@ -149,6 +165,8 @@
         <div class="column is-full-width">
           <div class="content">
             <h2 class="title is-3" style="text-align: center;">Results</h2>
+            AstroLoc excels in various space-to-ground localization tasks. While trained for astronaut photography localization, AstroLoc can also be used to identify satellite location/orbit from imagery (the <b>"Lost in Space" problem</b>), and localize <b>historical space shuttle photography</b>, which was originally taken on film and digitized and doesn't come tied to trajectory data. Examples from each domain, which contain notable visual differences (domain gaps), are below.
+            <p></p>
             <img src="./static/images/teaser.png" />
           </div>
         </div>
