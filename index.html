@@ -30,7 +30,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div class="columns is-centered">
+      <div class="columns is-centered is-four-fifths">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">AstroLoc: Robust Space to Ground Image Localizer</h1>
           <div class="is-size-5 publication-authors">
@@ -46,7 +46,7 @@
           
 	      <div class="is-size-5 publication-authors">
 		<span class="author-block"><sup>1</sup>Politecnico di Torino,</span>
-		<span class="author-block"><sup>2</sup>Jacobs Technology, NASA Johnson Space Center</span>
+		<span class="author-block"><sup>2</sup>Independent Researcher</span>
 	      </div>
               <div class="column has-text-centered">
                 <div class="publication-links">
@@ -113,16 +113,17 @@
     </div>
   </div>
 </section>
+
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <div class="content">
+      <div class="column is-four-fifths">
           <h2 class="title is-3" style="text-align: center;">Demo</h2>
-          Try out model on any photo of Earth from space <a href="https://3341e98c1979ac2831.gradio.live/">here</a>!
-          <p></p>
-          <img src="./static/videos/astroloc_demo_gif.gif" />
-        </div>
+          <div class="content has-text-justified">
+          Try our model on any photo of Earth from space <a href="https://3341e98c1979ac2831.gradio.live/">here</a>!
+            <p></p>
+            <img style="width:100%; height:auto" src="./static/videos/astroloc_demo_gif.gif"/>
+          </div>
       </div>
     </div>
   </div>
@@ -156,7 +157,7 @@
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-full-width">
+        <div class="column is-four-fifths">
           <div class="content">
             <h2 class="title is-3" style="text-align: center;">Goal</h2>
             <img src="https://earthloc-and-earthmatch.github.io/static/images/task_animation.gif" />
@@ -172,7 +173,7 @@
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-full-width">
+        <div class="column is-four-fifths">
           <div class="content">
             <h2 class="title is-3" style="text-align: center;">Training Pipeline</h2>
             AstroLoc is the first APL model to be trained <em>on astronaut photos themselves</em>. After converting 300k weakly labeled astronaut photos into a fully labeled training set, we pair astronaut photos with corresponding satellite images and train using a contrastive loss. At the same time, we jointly train on batches of clustered satellite images (following the method in EarthLoc), to ensure our model has a complete view of Earth's landforms.
@@ -187,7 +188,7 @@
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-full-width">
+        <div class="column is-four-fifths">
           <div class="content">
             <h2 class="title is-3" style="text-align: center;">Results</h2>
             AstroLoc excels in various space-to-ground localization tasks. While trained for astronaut photography localization, AstroLoc can also be used to identify satellite location/orbit from imagery (the <b>"Lost in Space" problem</b>), and localize <b>historical space shuttle photography</b>, which was originally taken on film and digitized and doesn't come tied to trajectory data. Examples from each domain, which contain notable visual differences (domain gaps), are below.
